@@ -6,8 +6,9 @@ const Partners = () => {
             <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 grid gap-8">
                 <h1 className="text-5xl text-center font-semibold pb-10">
                     Our Partners
+                    <div className="w-40 h-1 bg-orange-400 mx-auto mt-4 rounded"></div>
                 </h1>
-                 <div className="w-20 h-1 bg-orange-400 mx-auto mb-4 rounded"></div>
+                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
                     <div className="flex justify-center">
                         <img className="h-16 w-auto" src="https://cinnamon-pure-oil.vercel.app/Partners/partner1.png" alt="Partner 1" />

@@ -17,44 +17,61 @@ const testimonials = [
     company: "GrowthCorp",
     avatar: "https://randomuser.me/api/portraits/men/46.jpg",
   },
+  {
+    text: "From the initial consultation to the final delivery, the experience was seamless. Their team is not only skilled but also incredibly responsive and easy to work with. Our new website has received rave reviews from our clients.",
+    name: "Emily Davis",
+    role: "Founder, Creative Solutions",
+    company: "Creative Solutions",
+    avatar: "https://randomuser.me/api/portraits/women/45.jpg",
+  },
+  {
+    text: "I was impressed by their ability to understand our unique needs and tailor their services accordingly. The project management was top-notch, and they kept us informed every step of the way. The end result is a product that truly reflects our brand.",
+    name: "David Smith",
+    role: "Product Manager, Innovatech",
+    company: "Innovatech",
+    avatar: "https://randomuser.me/api/portraits/men/47.jpg",
+  },
 ];
 
 const TestimonialSection = () => {
   const [current, setCurrent] = useState(0);
 
   const next = () => {
-    setCurrent((prev) => (prev + 1) % testimonials.length);
+    setCurrent((prev) => (prev + 2) % testimonials.length);
   };
 
   const prev = () => {
-    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrent((prev) => (prev - 2 + testimonials.length) % testimonials.length);
   };
 
-  return (
-    <section className="py-16 px-4 ">
-      <div className="max-w-5xl mx-auto text-center">
-         <h1 className="text-5xl text-center font-semibold pb-10">
-                  Client Testimonials
+  // Get current and next testimonial (with wrap-around)
+  const visibleTestimonials = [
+    testimonials[current],
+    testimonials[(current + 1) % testimonials.length],
+  ];
 
-                </h1>
-        <div className="w-20 h-1 bg-orange-400 mx-auto mb-4 rounded"></div>
+  return (
+    <section className="py-16 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-5xl font-semibold pb-10">
+          Client Testimonials
+          <div className="w-40 h-1 bg-orange-400 mx-auto mt-4 rounded"></div>
+        </h1>
+
         <p className="text-gray-600 mb-12">
           Discover what our clients say about their experience working with us
         </p>
 
-        <div className="relative flex flex-col md:flex-row gap-8 justify-center">
-          {testimonials.map((t, index) => (
+        <div className="relative flex flex-col md:flex-row gap-8 justify-center items-center">
+          {visibleTestimonials.map((t, index) => (
             <div
               key={index}
-              className="bg-white shadow-md p-6 rounded-2xl max-w-md text-left"
+              className="bg-white shadow-md p-6 rounded-2xl max-w-md text-left w-full md:w-1/2"
             >
               <div className="flex items-center gap-2 text-orange-400 mb-4">
-               
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400">
-                      ★
-                    </span>
+                    <span key={i} className="text-yellow-400">★</span>
                   ))}
                 </div>
               </div>
@@ -74,14 +91,15 @@ const TestimonialSection = () => {
             </div>
           ))}
 
-          {/* Left arrow */}
+          {/* Prev Button */}
           <button
             onClick={prev}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow rounded-full p-2"
           >
             ←
           </button>
-          {/* Right arrow */}
+
+          {/* Next Button */}
           <button
             onClick={next}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow rounded-full p-2"

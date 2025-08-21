@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
 
    
-      <div className="max-w-5xl mx-auto px-4 mt-10 border-t border-gray-700 py-4 flex flex-col md:flex-row justify-between text-gray-500 text-xs md:text-sm">
+      <div className="  px-4 mt-10 border-t border-gray-700 py-4 flex flex-col md:flex-row justify-between text-gray-500 text-xs md:text-sm">
         <p>© 2025 Cinnamon Essential Oil Project. All rights reserved.</p>
         <div className="flex gap-4 mt-2 md:mt-0">
           <a href="#" className="hover:text-white">Terms</a>

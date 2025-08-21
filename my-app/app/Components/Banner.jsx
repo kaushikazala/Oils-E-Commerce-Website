@@ -31,7 +31,6 @@ const Banner = () => {
 
             <div className="flex items-center gap-4 p-5 border-2 border-[#F26830]/20 rounded-xl shadow-md md:w-2/3 bg-white">
               <div className="flex-shrink-0 text-[#F26830]">
-                {/* Example icon (Heroicons) */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2h2m10-4v4m0 0H7m10 0V4m0 4H7" />
                 </svg>
@@ -44,13 +43,13 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center" >
             <img
               src="https://cinnamon-pure-oil.vercel.app/_next/image?url=%2Fwebassets%2Fbanner2.png&w=640&q=75"
               alt="Cinnamon Essential Oil Banner"
               width={600}
               height={600}
-              className="rounded-xl object-cover w-full h-[400px] md:h-[600px] "
+              className="rounded-xl object-cover w-full h-[600px] md:h-[600px] "
             />
           </div>
         </div>
