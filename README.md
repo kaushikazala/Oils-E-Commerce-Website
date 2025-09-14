@@ -34,6 +34,7 @@ This project features a **responsive UI, product catalog, and reusable component
 ## 📂 Project Structure  
 Oils-E-Commerce-Website/
 │── public/ # Static assets (images, icons, etc.)
+
 │── src/
 │ ├── components/ # Reusable UI components
 │ ├── pages/ # Next.js pages (Home, Products, Contact, etc.)
@@ -95,4 +96,5 @@ Contributions are welcome!
 This project is licensed under the MIT License.
 
 ---
+
 
