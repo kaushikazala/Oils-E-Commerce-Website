@@ -31,22 +31,6 @@ This project features a **responsive UI, product catalog, and reusable component
 
 ---
 
-## 📂 Project Structure  
-Oils-E-Commerce-Website/
-│── public/ # Static assets (images, icons, etc.)
-
-│── src/
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Next.js pages (Home, Products, Contact, etc.)
-│ ├── styles/ # Global and Tailwind styles
-│ ├── utils/ # Helper functions
-│── package.json # Dependencies and scripts
-│── tailwind.config.js # Tailwind configuration
-│── postcss.config.js # PostCSS configuration
-│── README.md # Project documentation
-
----
-
 ## 🚀 Getting Started  
 
 ### 1️⃣ Clone the repository  
@@ -96,5 +80,6 @@ Contributions are welcome!
 This project is licensed under the MIT License.
 
 ---
+
 
 
